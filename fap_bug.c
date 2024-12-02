@@ -28,8 +28,8 @@ fap inserer(fap f, int element, int priorite)
     {
       precedent = f;
       courant = f->prochain;
-      while ((priorite >= courant->priorite) && (courant != NULL))
-        {
+      while ( (courant != NULL) && priorite >= courant->priorite)         
+      {
           precedent = courant;
           courant = courant->prochain;
         }
