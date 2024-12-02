@@ -63,7 +63,11 @@ int est_fap_vide(fap f)
 void
 detruire_fap(fap f)
 {
-  if (f != NULL)
-      free(f);
+  while (!est_fap_vide(f))
+    {
+      if (f != NULL)
+        free(f);
+    }
+  
 }
 
